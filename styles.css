@@ -29,8 +29,8 @@ html, body{
 #heading{
     height: 650px;
     background-image: url(https://media0.giphy.com/media/pOEbLRT4SwD35IELiQ/giphy.gif?cid=790b76114074090068f9595a7fcf206acfafea5dd15218d4&rid=giphy.gif&ct=g);
-    background-size: contain;
-    background-repeat:round;
+    background-size: cover;
+    background-repeat:no-repeat;
 }
 .header-text{
     font-size: 3rem;
@@ -91,6 +91,8 @@ html, body{
     #news{
         font-size: 1rem;
         padding: 20% 8%;
+        background-size: cover;
+    background-repeat:no-repeat;
     }
     .box{
         height: 410px;
