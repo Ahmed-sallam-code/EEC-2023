@@ -2,13 +2,8 @@
 body{
     overflow-x: hidden ;
 }
-#navigation{
-    overflow-x: hidden;
-    width: 100%;
-}
 .navbar{
     font-family: 'Bree Serif', serif;
-    overflow-x: clip;
 }
 .navbar-brand{
     font-size: 1.5rem !important;
