@@ -1,15 +1,29 @@
 /*Navigation bar*/
-body{
+html, body{
     overflow-x: hidden ;
+}
+#navigation{
+    overflow-x: hidden;
+    width: 100%;
 }
 .navbar{
     font-family: 'Bree Serif', serif;
+    overflow-x: clip;
 }
 .navbar-brand{
     font-size: 1.5rem !important;
     font-weight: 500 !important;
 }
-
+@media (max-width:600px){
+    .navbar-brand{
+        font-size: 1.2rem !important;
+        font-weight: 500 !important;
+    }
+    .navbar-nav{
+        margin: 1% 5%;
+        text-align:center;
+    }
+}
 
 /*Heading section*/
 #heading{
@@ -32,6 +46,19 @@ body{
     text-align: end;
     margin: 30% 8% 6% 2%;
    
+}
+@media (max-width:600px){
+    #heading{
+        height: 450px;
+    }
+    .header-text{
+        font-size: 2rem;
+        margin: 30% 0;
+        text-align: center;
+    }
+    .header-text-ar{
+        display: none;
+    }
 }
 
 /*News section*/
@@ -60,7 +87,18 @@ body{
     color: #FFF;
     text-shadow: 0px 0px 20px red;
 }
-
+@media (max-width:600px){
+    #news{
+        font-size: 1rem;
+        padding: 20% 8%;
+    }
+    .box{
+        height: 410px;
+    }
+    .news-header,.content-header{
+        font-size: 2rem;
+    }
+}
 
 /*contents section*/
 
