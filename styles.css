@@ -178,15 +178,15 @@ html, body{
 .sun{
     width: 400px;
     height: 400px;
-    /*background-color: #72E0EF;*/
-    /*border: solid 2px #FF5DA2;*/
+    /*background-color: #72E0EF;
+    border: solid 2px #FF5DA2;*/
     animation-name: RS;
     animation-timing-function: linear;
     animation-duration: 20s;
     animation-iteration-count: infinite;
     position: relative;
     left: 50%;
-    border-radius: 50%;
+    /*border-radius: 50%;*/
 }
 .stop{
     animation-play-state: paused;
@@ -258,6 +258,43 @@ background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(255,160,201,1) 
     text-decoration: none;
     color: black;
 }
+
+@media (max-width:600px){
+    .sun{
+        width: 250px;
+        height: 250px;
+    }
+    .venus{
+        top: 74%;
+    }
+    .mars{
+        top: 74%;
+        left: 74%;
+    }
+    .earth{
+        left: 74%;
+    }
+    .jupiter{
+        left: 37%;
+        top: -38px;
+    }
+    .saturn{
+        top:225px ;
+        left: 37%;
+    }
+    .neutron-star{
+        width: 100px;
+        height: 100px;
+    }
+    .mercury, .venus, .earth, .mars, .jupiter, .saturn{
+        font-size: 1.2rem;
+    }
+    .shadow:hover{
+        width: 200px;
+        height: 200px;
+    }
+}
+
 @keyframes RS {
     from{
         transform:translate(-50%, 0) rotate(0deg) ;
