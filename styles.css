@@ -121,6 +121,9 @@ html, body{
     border-radius: 10%;
     font-weight: 500;
     font-size: 1.3rem;
+    color: #000D6B;
+    position: relative;
+    visibility: hidden;
 }
 .empty{
     background-image: url(https://media4.giphy.com/media/jsUXu7umQRFqU/giphy.gif?cid=ecf05e47ewkkju4pg8zlpuvojmf9ijbvj32otc71bwssqirt&rid=giphy.gif&ct=g);
@@ -144,6 +147,132 @@ html, body{
 }
 .card-header{
     margin: 5% 0;
+}
+.dead{
+    text-decoration: line-through;
+    color:#FF5DA2;
+    opacity: 0.5;
+}
+.cards-animation{
+    animation-name: card-animation;
+    animation-timing-function: ease-in-out;
+    animation-duration: 0.75s;
+    animation-iteration-count: 1;
+    visibility: visible;
+}
+@keyframes card-animation {
+    from{
+        opacity: 0;
+        top: -100px;
+    }
+    to{
+        opacity: 1;
+        top: 0;
+    }
+    
+}
+/*Rotaiting subjects*/
+#rotating-subjects{
+    padding: 10% 15% 15%;
+}
+.sun{
+    width: 400px;
+    height: 400px;
+    /*background-color: #72E0EF;*/
+    /*border: solid 2px #FF5DA2;*/
+    animation-name: RS;
+    animation-timing-function: linear;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    position: relative;
+    left: 50%;
+    border-radius: 50%;
+}
+.stop{
+    animation-play-state: paused;
+}
+.mercury, .venus, .earth, .mars, .jupiter, .saturn{
+    position: absolute;
+    width: 66.666px;
+    height: 66.666px;
+    background: rgb(255,255,255);
+background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(255,160,201,1) 45%, rgba(255,93,162,1) 100%);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    text-align: center;
+    font-family: 'Bree Serif', serif;
+    animation-name: Subjects;
+    animation-timing-function: linear;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    transition: 500ms;
+}
+.mercury:hover, .venus:hover, .earth:hover, .mars:hover, .jupiter:hover, .saturn:hover{
+    width: 90px;
+    height: 90px;
+}
+.neutron-star{
+    width: 200px;
+    height: 200px;
+    background: rgb(255,255,255);
+    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(99,241,204,1) 42%, rgba(0,134,255,1) 100%);
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.shadow{
+    width: 210px;
+    height: 210px;
+    opacity: 0.3;
+    transition: 500ms;
+}
+.shadow:hover{
+    width: 400px;
+    height: 400px;
+    opacity: 0.4;
+}
+.venus{
+    top: 83.5%;
+}
+.earth{
+    left: 83.5%;
+}
+.mars{
+    top: 83.5%;
+    left: 83.5%;
+}
+.jupiter{
+    left: 41.75%;
+    top: -69.7px;
+}
+.saturn{
+    top: 400px;
+    left: 41.75%;
+}
+.sub-link{
+    text-decoration: none;
+    color: black;
+}
+@keyframes RS {
+    from{
+        transform:translate(-50%, 0) rotate(0deg) ;
+    }
+    to{
+        transform:translate(-50%, 0) rotate(360deg);
+    }
+}
+@keyframes Subjects {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(-360deg);
+    }
 }
 
 /*Footer*/
@@ -172,6 +301,7 @@ padding-bottom: 0;
     margin: 2% 5% 2% 5%;}    
 
 }
+
 @media (max-width:600px){
     .social-icon{
         margin: 2% 4% 0 4%;
