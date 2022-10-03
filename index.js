@@ -1,5 +1,5 @@
 Document
-
+/*
 function marioSound(htmlclass){
 document.querySelector("." + htmlclass).addEventListener("click", onClick);
 }
@@ -15,7 +15,7 @@ function makeSound(){
 
 marioSound("carousel-control-prev");
 marioSound("carousel-control-next")
-
+*/
 ////////////////viewport///////////////////
 
 function viewPort(htmlClass,cssClass,i){
@@ -53,17 +53,18 @@ function viewPort(htmlClass,cssClass,i){
 ///////////////////////////////////////////////
 
 
-   //Rotating subjects mechanism  
+   //Rotating subjects stop mechanism mechanism  
     document.querySelector(".sun").addEventListener("mouseenter", stopRotationF);
     function stopRotationF(){
-      document.querySelector(".sun").classList.add("stop");
+      document.querySelector(".sun").classList.toggle("stop");
       document.querySelectorAll(".planet").forEach(element => {
-        element.classList.add("stop");
+        element.classList.toggle("stop");
       });
-      setTimeout(function(){
+      document.querySelector(".sun").addEventListener("mouseleave", stopRotationF);
+      /*setTimeout(function(){
         document.querySelector(".sun").classList.remove("stop");
         document.querySelectorAll(".planet").forEach(element => {
           element.classList.remove("stop");
         });
-      }, 1000);
+      }, 1000);*/
     } /////////////////////////////////
